@@ -85,13 +85,14 @@
 		                $("#employeetable").find("tr:gt(0)").remove();
 		                var table1 = $("#employeetable");
 		                $.each(responseJson, function(key,value) { 
-		                     var rowNew = $("<tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>");
+		                     var rowNew = $("<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>");
 		                        rowNew.children().eq(0).text(value['id']); 
 		                        rowNew.children().eq(1).text(value['name']); 
-		                        rowNew.children().eq(2).text(value['phone']); 
-		                        rowNew.children().eq(3).text(value['supervisor']); 
-		                        rowNew.children().eq(4).text(value['username']); 
-		                        rowNew.children().eq(5).text(value['password']); 
+		                        rowNew.children().eq(2).text(value['state']);
+		                        rowNew.children().eq(3).text(value['phone']); 
+		                        rowNew.children().eq(4).text(value['supervisor']); 
+		                        rowNew.children().eq(5).text(value['username']); 
+		                        rowNew.children().eq(6).text(value['password']); 
 		                        rowNew.appendTo(table1);
 		                });
 		                }

@@ -6,12 +6,14 @@ public class Employee {
   private String supervisor;
   private String username;
   private String password;
+  private String state;
 
-  	public Employee(int id, String name, String phone, String supervisor,
+  	public Employee(int id, String name, String state, String phone, String supervisor,
                   String username, String password)
         {
           this.setEmployeeID(id);
           this.setName(name);
+          this.setState(state);
           this.setPhone(phone);
           this.setSupervisor(supervisor);
           this.setUsername(username);
@@ -34,6 +36,15 @@ public class Employee {
 		this.phone = phone;
 	}
 	
+	
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
 	public void setSupervisor(String supervisor) {
 		this.supervisor = supervisor;
 	}
